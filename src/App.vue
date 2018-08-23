@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <div>{{ $t('COMMON.VIVIFY_IDEAS') }}</div>
     <router-view/>
   </div>
 </template>
