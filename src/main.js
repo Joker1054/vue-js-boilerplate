@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import VueI18n from 'vue-i18n'
 import { LOCALES } from './i18n'
 
@@ -26,6 +27,7 @@ configureVue()
 new Vue({
   el: '#app',
   router,
+  store,
   VueI18n,
   components: { App },
   template: '<App/>'
