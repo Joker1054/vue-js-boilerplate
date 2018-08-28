@@ -1,0 +1,11 @@
+
+.project-c-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  input {
+    width: 10rem;
+    margin-bottom: $base-size;
+  }
+}

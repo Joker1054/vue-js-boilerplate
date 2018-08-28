@@ -1,5 +1,14 @@
 export const EN = {
   COMMON: {
-    VIVIFY_IDEAS: 'Vivify Ideas' // This is just an example - delete it after setup
+    VIVIFY_IDEAS: 'Vivify Ideas',
+    SUBMIT: 'Submit'
+  },
+  ACCOUNT: {
+    LOGIN: 'Login',
+    USERNAME: 'Username',
+    PASSWORD: 'Password',
+    LOGOUT: 'Logout',
+    REGISTER: 'Register',
+    EMAIL: 'Email'
   }
 }

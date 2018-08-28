@@ -5,9 +5,17 @@ import App from './App'
 import router from './router'
 import store from './store'
 import VueI18n from 'vue-i18n'
+import Axios from 'axios'
 import { LOCALES } from './i18n'
+import { config } from './config'
 
 Vue.config.productionTip = false
+
+function configureHttp () {
+  Axios.defaults.baseURL = config.getApiUrl()
+  Axios.defaults.headers.Accept = 'application/json'
+  Axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
+}
 
 function configureVueI18n () {
   Vue.use(VueI18n)
@@ -19,6 +27,7 @@ function configureVueI18n () {
 
 function configureVue () {
   configureVueI18n()
+  configureHttp()
 }
 
 /* eslint-disable no-new */

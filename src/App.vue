@@ -8,10 +8,7 @@
 
 <script>
 export default {
-  name: 'App',
-  created () {
-    console.log(this.$store)
-  }
+  name: 'App'
 }
 </script>
 
@@ -24,4 +21,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+</style>
+
+<style lang="sass">
+  @import '/styles/app.scss';
 </style>
