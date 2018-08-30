@@ -14,7 +14,6 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { CLIENT_ID } from './../../constants'
 import isEmpty from 'lodash/isEmpty'
 
 export default {
@@ -34,8 +33,9 @@ export default {
       if (!isEmpty(this.email) && !isEmpty(this.password)) {
         this.login({
           email: this.email,
-          password: this.password,
-          clientId: CLIENT_ID
+          password: this.password
+        }).then(() => {
+          this.$router.push({ name: 'home' })
         })
       }
     }

@@ -7,10 +7,11 @@ import RegisterComponent from '@/components/account/register.component.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'home',
       component: HelloWorld
     },
     {

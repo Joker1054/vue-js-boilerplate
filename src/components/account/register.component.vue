@@ -16,7 +16,6 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
-import { CLIENT_ID } from './../../constants'
 import isEmpty from 'lodash/isEmpty'
 
 export default {
@@ -36,10 +35,11 @@ export default {
     handleRegister () {
       if (!isEmpty(this.username) && !isEmpty(this.password) && !isEmpty(this.email)) {
         this.register({
-          username: this.username,
+          name: this.username,
           password: this.password,
-          email: this.email,
-          clientId: CLIENT_ID
+          email: this.email
+        }).then(() => {
+          this.$router.push({ name: 'home' })
         })
       }
     }
