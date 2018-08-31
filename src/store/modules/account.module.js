@@ -10,28 +10,24 @@ const actions = {
     commit('LOGIN_REQUEST', { email })
 
     authApiService.login(email, password)
-      .then(
-        user => {
-          commit('LOGIN_SUCCESS', user)
-        },
-        error => {
-          commit('LOGIN_FAILURE', error)
-        }
-      )
+      .then((user) => {
+        commit('LOGIN_SUCCESS', user)
+      })
+      .catch((error) => {
+        commit('LOGIN_FAILURE', error)
+      })
   },
 
   register ({ commit }, user) {
     commit('REGISTER_REQUEST', user)
 
     authApiService.register(user)
-      .then(
-        user => {
-          commit('REGISTER_SUCCESS', user)
-        },
-        error => {
-          commit('REGISTER_FAILURE', error)
-        }
-      )
+      .then((user) => {
+        commit('REGISTER_SUCCESS', user)
+      })
+      .catch((error) => {
+        commit('REGISTER_FAILURE', error)
+      })
   }
 }
 
